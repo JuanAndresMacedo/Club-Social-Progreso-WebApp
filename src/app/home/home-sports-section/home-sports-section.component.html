@@ -1,0 +1,44 @@
+<div class="d-flex flex-column justify-content-center align-items-start p-5">
+    <h1 class="title font-csp2 mb-5">Deportes</h1>
+    <div class="w-100 d-flex justify-content-between flex-wrap">
+        <app-flip-card
+        sport="Handball" class="top"
+        description="Deporte de equipo en el que dos equipos de siete jugadores cada uno
+        (seis de campo y un golero) compiten para anotar goles lanzando una pelota con las manos
+        en el arco del equipo contrario. El juego se desarrolla en una cancha rectangular y
+        combina velocidad, fuerza y estrategia."
+        imageUrl="../../../assets/images/sports/handball.jpg" />
+
+        <app-flip-card
+        sport="Volleyball" class="top"
+        description="Deporte de equipo en el que dos equipos de seis jugadores se enfrentan en una
+        cancha dividida por una red. El objetivo es enviar el balón por encima de la red y que toque
+        el suelo del campo contrario, o provocar un error del adversario. Se juega en sets, y combina
+        habilidades de salto, golpeo y trabajo en equipo."
+        imageUrl="../../../assets/images/sports/volley.jpg" />
+        
+        <app-flip-card sport="Ciclismo" class="top2"
+        description="Deporte que consiste en utilizar una bicicleta para competir en carreras de
+        velocidad, resistencia o contra el reloj. Se puede practicar en diversas modalidades.
+        Es conocido por su demanda física y estratégica."
+        imageUrl="../../../assets/images/sports/ciclismo.jpg" />
+        
+        <app-flip-card
+        sport="Bochas"
+        description="Deporte tradicional en el que los jugadores lanzan bolas (bochas)
+        para acercarlas lo más posible a una bola objetivo más pequeña. Es conocido por su precisión
+        y estrategia, y es popular en varios países, especialmente en Italia y Sudamérica."
+        imageUrl="../../../assets/images/sports/bochas.jpeg" />
+    </div>
+</div>
+
+<style>
+    h1::before {
+        content: '';
+        display: block;
+        width: 40%;
+        height: 5px;
+        background-color: var(--cspBlue);
+        margin-bottom: 5px;
+    }
+</style>

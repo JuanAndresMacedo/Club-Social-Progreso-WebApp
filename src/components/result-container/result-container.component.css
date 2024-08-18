@@ -1,0 +1,24 @@
+.crest {
+    width: 125px;
+}
+
+#informationContainer {
+    width: 40%;
+    font-size: 120px;
+}
+
+.title {
+    font-size: medium;
+}
+
+@media (max-width:576px) {
+    #informationContainer {
+        font-size: 80px;
+    }
+}
+
+@media (max-width:470px) {
+    #informationContainer {
+        font-size: 60px;
+    }
+}

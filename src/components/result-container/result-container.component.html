@@ -1,0 +1,18 @@
+<div class="resultContainer d-flex flex-column p-3">
+    <div class="d-flex mb-4">
+        <div class="me-4 d-flex justify-content-center align-items-center">
+            <img class="img-fluid crest" src="../../assets/images/cspLogo.png" alt="">
+        </div>
+        <div id="informationContainer" class="d-flex flex-column justify-content-evenly align-items-center">
+            <div class="result font-csp">
+                <span>{{ firstResult }}</span>
+                <span>-</span>
+                <span>{{ secondResult }}</span>
+            </div>
+        </div>
+        <div class="ms-4 d-flex justify-content-center align-items-center">
+            <img class="img-fluid crest" [src]="opponentCrest" alt="">
+        </div>
+    </div>
+    <div class="title text-center">{{ sportTitle }} - {{ tournament }}</div>
+</div>

@@ -1,0 +1,17 @@
+:host {
+    display: flex;
+    height: 95vh;
+    width: 100%;
+    background-color: var(--cspBlue);
+}
+
+.background-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    filter: brightness(50%);
+}
+
+.crest-img{
+    max-height: 125px;
+}

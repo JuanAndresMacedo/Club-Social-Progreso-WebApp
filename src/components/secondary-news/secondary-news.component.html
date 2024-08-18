@@ -1,0 +1,17 @@
+<div id="container" class="rounded-1 border shadow overflow-hidden w-100 h-100" [ngClass]="class"
+[routerLink]="['/news', newsId]">
+    <div id="imgContainer">
+        <img [src]="imageUrl" alt="">
+    </div>
+    <div id="descriptionContainer" class="p-3 d-flex flex-column justify-content-between">
+        <div class="w-100">
+            <h4 class="font-csp">{{ title }}</h4>
+            <p>{{ description }}</p>
+        </div>
+        <div id="subInfoContainer" class="d-flex w-100">
+            <span class="me-2">{{ date }}</span>
+            <span>|</span>
+            <span class="ms-2">{{ topic }}</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="w-100 pt-4 p-5">
+    <h2 class="title font-csp2 mb-4">Lo último</h2>
+    <div class="d-flex flex-column flex-md-row justify-content-between mb-4 flex-wrap">
+        <ng-container *ngFor="let news of newsList; let i = index">
+            <ng-container *ngIf="news.verticalImage; else horizontalNews">
+                <app-main-news [newsId]="news.id" [title]="news.title" [description]="news.description"
+                    [imageUrl]="news.imageUrl" [date]="news.date" [topic]="news.topic"
+                    [ngClass]="{'mb-4': i < newsList.length - (newsList.length % 2 === 0 ? 2 : 1)}">
+                </app-main-news>
+            </ng-container>
+            <ng-template #horizontalNews>
+                <app-full-img-main-news [newsId]="news.id" [title]="news.title" [imageUrl]="news.imageUrl"
+                    [date]="news.date" [topic]="news.topic"
+                    [ngClass]="{'mb-4': i < newsList.length - (newsList.length % 2 === 0 ? 2 : 1)}">
+                </app-full-img-main-news>
+            </ng-template>
+        </ng-container>
+    </div>
+</div>
+
+<style>
+    h2::before {
+        content: '';
+        display: block;
+        width: 70px;
+        height: 5px;
+        background-color: var(--cspBlue);
+        margin-bottom: 5px;
+    }
+</style>

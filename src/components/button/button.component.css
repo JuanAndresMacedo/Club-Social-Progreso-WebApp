@@ -1,0 +1,17 @@
+button.blue {
+    background-color: var(--cspBlue);
+    color: white;
+}
+
+button.blue:hover {
+    background-color: rgb(49, 84, 141);
+}
+
+button.white {
+    background-color: white;
+    color: var(--cspBlue);
+}
+
+button.white:hover {
+    background-color: #f0f0f0;
+}

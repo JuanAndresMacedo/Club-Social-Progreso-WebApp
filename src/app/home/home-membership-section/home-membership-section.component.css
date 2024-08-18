@@ -1,0 +1,32 @@
+#membershipSection {
+    background-color: var(--cspBlue);
+    color: white;
+}
+
+#scheduleContainer {
+    width: 50%;
+}
+
+#memberContainer {
+    width: 50%;
+}
+
+@media (max-width: 575.98px) {
+    #scheduleContainer {
+        width: 100%;
+        margin-bottom: calc(1rem * 1.5);
+    }
+
+    #scheduleContainer::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: white;
+        margin-top: calc(1rem * 1.5);
+    }
+
+    #memberContainer {
+        width: 100%;
+    }
+}

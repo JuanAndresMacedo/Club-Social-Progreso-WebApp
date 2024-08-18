@@ -1,0 +1,54 @@
+.footer {
+    background-color: #2A2A2A;
+    color: #c7c7c7;
+}
+
+#miniFooter {
+    background-color: #1A1A1A;
+    color: #9B9B9B;
+    font-size: small;
+}
+
+a {
+    text-decoration: none;
+    color: #9B9B9B;
+}
+
+#myPage:hover {
+    color: rgb(0, 130, 236);
+}
+
+img {
+    width: 100px;
+}
+
+.socialNetwork {
+    background-color: #3F3F3F;
+    color: white;
+}
+
+.socialNetwork:hover {
+    background-color: var(--cspBlue);
+}
+
+@media (max-width: 650px) {
+    #container{
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #cspLogo{
+        margin: 0 !important;
+        margin-bottom: calc(1rem) !important;
+    }
+
+    #informationContainer{
+        width: 100%;
+        margin: 0 !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin-bottom: calc(1rem) !important;
+    }
+}

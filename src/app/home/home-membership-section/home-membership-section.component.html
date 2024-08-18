@@ -1,0 +1,32 @@
+<div id="membershipSection" class="h-100 w-100 p-5 shadow
+        d-flex flex-column flex-sm-row justify-content-evenly">
+    <div id="scheduleContainer" class="d-flex flex-column
+        justify-content-center 
+    align-items-center">
+        <h1 class="d-flex justify-content-center align-items-center mb-4 font-csp2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-clock me-2"
+                viewBox="0 0 16 16">
+                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+            </svg>
+            Horarios
+        </h1>
+        <h6>Secretaria:</h6>
+        <span class="mb-2 text-center">Lunes a Viernes de 17:00 a 21:00</span>
+        <h6>Actividades:</h6>
+        <span class="text-center">Lunes a Viernes de 07:00 a 22:00</span>
+    </div>
+    <div id="memberContainer" class="d-flex flex-column
+        justify-content-center align-items-center">
+        <h1 class="d-flex justify-content-center align-items-center mb-4 font-csp2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                class="bi bi-people-fill me-2" viewBox="0 0 16 16">
+                <path
+                    d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+            </svg>
+            Socios
+        </h1>
+        <p class="mb-4 text-center">Sumate a la familia</p>
+        <app-button [onClick]="navigateToMembership" buttonText="Asociarme" buttonClass="white" />
+    </div>
+</div>

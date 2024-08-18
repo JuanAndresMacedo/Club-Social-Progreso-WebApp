@@ -1,0 +1,28 @@
+<div *ngIf="news">
+    <app-home-nav />
+    <div id="container" class="w-100 d-flex shadow">
+        <div id="img-container" class="w-100">
+            <img id="newsImage" [src]="news.imageUrl" alt="" [ngClass]="{'object-position-top': news.verticalImage}">
+        </div>
+        <div id="sombra" class="d-flex flex-column justify-content-end align-items-center pb-5">
+            <h1 class="m-0 font-csp">{{ news.title }}</h1>
+        </div>
+    </div>
+    <app-content-container>
+        <div id="details-container" class="w-100 mb-5">
+            <span>{{ news.topic }}</span>
+            <span class="me-1 ms-1">|</span>
+            <span>{{ news.date }}</span>
+        </div>
+        <div class="mb-5">
+            <p *ngFor="let paragraph of news.content">
+                {{ paragraph }}
+            </p>
+        </div>
+        <div class="divider-logo-container">
+            <div class="line"></div>
+            <img class="logo" src="../../../assets/images/cspLogo.png" alt="" />
+            <div class="line"></div>
+        </div>
+    </app-content-container>
+</div>

@@ -1,0 +1,71 @@
+nav {
+  background-color: var(--cspBlue);
+}
+
+.font-csp {
+  font-size: x-large;
+}
+
+#mininav {
+  background-color: #1A1A1A;
+  font-size: smaller;
+}
+
+.socialNetwork {
+  color: white;
+}
+
+#cspLogoContainer, #miniNavLogInContainer {
+  cursor: pointer;
+}
+
+#cspLogo {
+  width: 100%;
+  max-width: 70px;
+}
+
+.dropdown-menu {
+  border-radius: 0;
+  border-top: none;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  background-color: #dadada !important;
+  color: black;
+}
+
+.offcanvas {
+  background-color: var(--cspBlue);
+}
+
+.offcanvas-body {
+  color: white;
+}
+
+.offcanvas-body a {
+  color: white;
+  text-decoration: none;
+}
+
+.offcanvas-body .btn-toggle {
+  color: white;
+}
+
+.navbar-nav .nav-item {
+  position: relative;
+}
+
+.navbar-nav .nav-item::after {
+  content: '';
+  position: absolute;
+  left: 1px;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.5s ease;
+}
+
+.navbar-nav .nav-item:hover::after {
+  width: 100%;
+}
