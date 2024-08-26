@@ -1,5 +1,8 @@
+<app-home-nav />
+<div *ngIf="news === null || news === undefined">
+    <p class="p-4">No se pudo cargar la noticia</p>
+</div>
 <div *ngIf="news">
-    <app-home-nav />
     <div id="container" class="w-100 d-flex shadow">
         <div id="img-container" class="w-100">
             <img id="newsImage" [src]="news.imageUrl" alt="" [ngClass]="{'object-position-top': news.verticalImage}">
@@ -15,9 +18,14 @@
             <span>{{ news.date }}</span>
         </div>
         <div class="mb-5">
-            <p *ngFor="let paragraph of news.content">
-                {{ paragraph }}
-            </p>
+            <ng-container *ngIf="news.content && news.content.length > 0; else noContent">
+                <p *ngFor="let paragraph of news.content">
+                    {{ paragraph }}
+                </p>
+            </ng-container>
+            <ng-template #noContent>
+                <p>No se pudo cargar la información.</p>
+            </ng-template>
         </div>
         <div class="divider-logo-container">
             <div class="line"></div>
@@ -26,3 +34,4 @@
         </div>
     </app-content-container>
 </div>
+<app-footer/>

@@ -14,6 +14,6 @@ export class FullImgSecondaryNewsComponent {
   @Input({ required: true }) imageUrl!: string;
   @Input({ required: true }) date!: string;
   @Input({ required: true }) topic!: string;
-  @Input() newsId!: number;
+  @Input() newsId!: string;
   @Input() class: string = '';
 }

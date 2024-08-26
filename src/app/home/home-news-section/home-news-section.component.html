@@ -1,29 +1,35 @@
 <div class="w-100 pt-4 p-5">
-    <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
-        <ng-container *ngFor="let news of mainNewsList">
-            <ng-container *ngIf="news.verticalImage; else horizontalNews">
-                <app-main-news [newsId]="news.id" [title]="news.title" [description]="news.description"
-                    [imageUrl]="news.imageUrl" [date]="news.date" [topic]="news.topic">
-                </app-main-news>
-            </ng-container>
-            <ng-template #horizontalNews>
-                <app-full-img-main-news [newsId]="news.id" [title]="news.title" [imageUrl]="news.imageUrl"
-                    [date]="news.date" [topic]="news.topic">
-                </app-full-img-main-news>
-            </ng-template>
-        </ng-container>
+    <div *ngIf="mainNewsList.length === 0 && secondaryNewsList.length === 0">
+        <p>No se pudieron cargar las noticias</p>
     </div>
-    <div class="w-100 d-flex justify-content-between flex-column flex-sm-row flex-wrap">
-        <ng-container *ngFor="let news of secondaryNewsList; let i = index">
-            <ng-container *ngIf="news.verticalImage; else horizontalNews">
-                <app-full-img-secondary-news [newsId]="news.id" [title]="news.title" [imageUrl]="news.imageUrl"
-                    [date]="news.date" [topic]="news.topic" [ngClass]="{'top': i !== secondaryNewsList.length - 1}" />
+    <div *ngIf="mainNewsList.length > 0 || secondaryNewsList.length > 0">
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+            <ng-container *ngFor="let news of mainNewsList">
+                <ng-container *ngIf="news.verticalImage; else horizontalNews">
+                    <app-main-news [newsId]="news.id" [title]="news.title" [description]="news.description"
+                        [imageUrl]="news.imageUrl" [date]="news.date" [topic]="news.topic">
+                    </app-main-news>
+                </ng-container>
+                <ng-template #horizontalNews>
+                    <app-full-img-main-news [newsId]="news.id" [title]="news.title" [imageUrl]="news.imageUrl"
+                        [date]="news.date" [topic]="news.topic">
+                    </app-full-img-main-news>
+                </ng-template>
             </ng-container>
-            <ng-template #horizontalNews>
-                <app-secondary-news [newsId]="news.id" [title]="news.title" [description]="news.description"
-                    [imageUrl]="news.imageUrl" [date]="news.date" [topic]="news.topic"
-                    [ngClass]="{'top': i !== secondaryNewsList.length - 1}" />
-            </ng-template>
-        </ng-container>
+        </div>
+        <div class="w-100 d-flex justify-content-between flex-column flex-sm-row flex-wrap">
+            <ng-container *ngFor="let news of secondaryNewsList; let i = index">
+                <ng-container *ngIf="news.verticalImage; else horizontalNews">
+                    <app-full-img-secondary-news [newsId]="news.id" [title]="news.title" [imageUrl]="news.imageUrl"
+                        [date]="news.date" [topic]="news.topic"
+                        [ngClass]="{'top': i !== secondaryNewsList.length - 1}" />
+                </ng-container>
+                <ng-template #horizontalNews>
+                    <app-secondary-news [newsId]="news.id" [title]="news.title" [description]="news.description"
+                        [imageUrl]="news.imageUrl" [date]="news.date" [topic]="news.topic"
+                        [ngClass]="{'top': i !== secondaryNewsList.length - 1}" />
+                </ng-template>
+            </ng-container>
+        </div>
     </div>
 </div>
