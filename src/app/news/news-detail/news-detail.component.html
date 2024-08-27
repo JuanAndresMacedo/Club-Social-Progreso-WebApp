@@ -1,6 +1,9 @@
 <app-home-nav />
-<div *ngIf="news === null || news === undefined">
-    <p class="p-4">No se pudo cargar la noticia</p>
+<div *ngIf="news === null || news === undefined" class="w-100 d-flex align-items-center
+justify-content-center p-4">
+    <div class="alert alert-danger m-0" role="alert">
+        No se pudo cargar la noticia
+    </div>
 </div>
 <div *ngIf="news">
     <div id="container" class="w-100 d-flex shadow">
@@ -34,4 +37,4 @@
         </div>
     </app-content-container>
 </div>
-<app-footer/>
+<app-footer />

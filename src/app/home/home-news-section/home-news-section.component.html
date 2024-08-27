@@ -1,6 +1,9 @@
 <div class="w-100 pt-4 p-5">
-    <div *ngIf="mainNewsList.length === 0 && secondaryNewsList.length === 0">
-        <p>No se pudieron cargar las noticias</p>
+    <div *ngIf="mainNewsList.length === 0 && secondaryNewsList.length === 0" class="w-100 d-flex 
+    align-items-center justify-content-center">
+        <div class="alert alert-danger m-0" role="alert">
+            No se pudieron cargar las noticias
+        </div>
     </div>
     <div *ngIf="mainNewsList.length > 0 || secondaryNewsList.length > 0">
         <div class="d-flex flex-column flex-md-row justify-content-between mb-4">

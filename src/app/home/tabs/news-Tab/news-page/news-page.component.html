@@ -1,7 +1,9 @@
 <div class="w-100 pt-4 p-5">
     <h2 class="title font-csp2 mb-4">Lo último</h2>
-    <div *ngIf="newsList.length === 0">
-        <p>No se pudieron cargar las noticias</p>
+    <div *ngIf="newsList.length === 0" class="w-100 d-flex align-items-center justify-content-center">
+        <div class="alert alert-danger m-0" role="alert">
+            No se pudieron cargar las noticias
+        </div>
     </div>
     <div class="d-flex flex-column flex-md-row justify-content-between mb-4 flex-wrap">
         <ng-container *ngFor="let news of newsList; let i = index">
