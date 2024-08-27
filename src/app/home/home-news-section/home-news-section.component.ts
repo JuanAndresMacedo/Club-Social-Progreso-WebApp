@@ -12,15 +12,20 @@ export class HomeNewsSectionComponent implements OnInit {
   mainNewsList: News[] = [];
   secondaryNewsList: News[] = [];
 
+  apiError : boolean = false;
+  apiSuccess : boolean = false;
+
   constructor(private newsService: NewsService) { }
 
   ngOnInit() {
     this.newsService.getLatestNews().subscribe({
       next: (response: GetAllNewsResponse) => {
+        this.apiSuccess = true;
         this.mainNewsList = response.newsList.$values.slice(0, 2);
         this.secondaryNewsList = response.newsList.$values.slice(2, 6);
       },
       error: (error) => {
+        this.apiError = true;
         console.log("Hubo un problema", error);
       }
     });

@@ -1,8 +1,8 @@
 <div class="w-100 pt-4 p-5">
     <h2 class="title font-csp2 mb-4">Lo último</h2>
-    <div *ngIf="newsList.length === 0" class="w-100 d-flex align-items-center justify-content-center">
-        <div class="alert alert-danger m-0" role="alert">
-            No se pudieron cargar las noticias
+    <div *ngIf="!apiSuccess" class="w-100 d-flex align-items-center justify-content-center">
+        <div [ngClass]="{'alert-primary': !apiError, 'alert-danger': apiError}" class="alert m-0" role="alert">
+            {{ apiError ? 'No se pudieron cargar las noticias' : 'Cargando...' }}
         </div>
     </div>
     <div class="d-flex flex-column flex-md-row justify-content-between mb-4 flex-wrap">

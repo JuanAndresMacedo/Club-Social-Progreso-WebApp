@@ -11,6 +11,8 @@ import GetNewsByIdResponse from '../../../backend/services/news/models/GetNewsBy
 })
 export class NewsDetailComponent implements OnInit{
   news?: News;
+  apiError : boolean = false;
+  apiSuccess : boolean = false;
 
   constructor(private route: ActivatedRoute, private newsService: NewsService) { }
 
@@ -19,6 +21,7 @@ export class NewsDetailComponent implements OnInit{
     if (id) {
       this.newsService.getNewsById(id).subscribe({
         next: (response: GetNewsByIdResponse) => {
+          this.apiSuccess = true;
           this.news = response.news;
           
           if (this.news?.content && (this.news.content as any).$values) {
@@ -26,7 +29,7 @@ export class NewsDetailComponent implements OnInit{
           }
         },
         error: (error) => {
-          console.log(this.news)
+          this.apiError = true;
           console.log("Hubo un problema", error);
         }
       });

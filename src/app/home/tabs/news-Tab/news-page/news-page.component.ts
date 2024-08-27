@@ -10,6 +10,8 @@ import GetAllNewsResponse from '../../../../../backend/services/news/models/GetA
 })
 export class NewsPageComponent implements OnInit {
   newsList: News[] = [];
+  apiError : boolean = false;
+  apiSuccess : boolean = false;
 
   constructor(private newsService: NewsService) {}
 
@@ -20,9 +22,11 @@ export class NewsPageComponent implements OnInit {
   private loadNews(): void {
     this.newsService.getAllNews().subscribe({
       next: (response: GetAllNewsResponse) => {
+        this.apiSuccess = true;
         this.newsList = response.newsList.$values;
       },
       error: (error) => {
+        this.apiError = true;
         console.log("Hubo un problema", error);
       }
     });

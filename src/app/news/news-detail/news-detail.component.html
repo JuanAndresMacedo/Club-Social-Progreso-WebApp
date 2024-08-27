@@ -1,8 +1,7 @@
 <app-home-nav />
-<div *ngIf="news === null || news === undefined" class="w-100 d-flex align-items-center
-justify-content-center p-4">
-    <div class="alert alert-danger m-0" role="alert">
-        No se pudo cargar la noticia
+<div *ngIf="!apiSuccess" class="w-100 d-flex align-items-center justify-content-center m-4">
+    <div [ngClass]="{'alert-primary': !apiError, 'alert-danger': apiError}" class="alert m-0" role="alert">
+        {{ apiError ? 'No se pudo cargar la noticia' : 'Cargando...' }}
     </div>
 </div>
 <div *ngIf="news">
