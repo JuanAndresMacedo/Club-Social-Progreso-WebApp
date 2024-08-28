@@ -35,6 +35,7 @@ h4 {
 
 #subInfoContainer {
     font-size: smaller;
+    flex-wrap: wrap;
 }
 
 @media (max-width: 767px) {

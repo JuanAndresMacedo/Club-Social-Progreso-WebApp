@@ -1,3 +1,3 @@
 export const environment = {
-    CSPApi: "http://localhost:5027",
+    CSPApi: "https://csp-api-gybbh2dea2d0dvbq.brazilsouth-01.azurewebsites.net",
   };
