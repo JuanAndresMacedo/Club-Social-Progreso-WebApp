@@ -6,7 +6,7 @@ Este proyecto no solo pone en práctica diversas tecnologías con las que me he 
 
 # Tecnologías y Herramientas
 
-**Frontend:** Angular (versión 18), ofreciendo una interfaz responsiva (se utilizó Bootstrap) y dinámica.
+**Frontend:** Angular (versión 18) y Bootstrap, ofreciendo una interfaz responsiva y dinámica.
 
 **Backend/API:** Una API desarrollada en .NET utilizando C#, que facilita la comunicación entre el frontend y la base de datos.
 
@@ -17,6 +17,10 @@ Este proyecto no solo pone en práctica diversas tecnologías con las que me he 
 # Arquitectura de la aplicación
 
 Esta aplicación sigue el modelo de **Arquitectura de Tres Niveles** (Three-Tier Architecture), que divide el sistema en tres capas principales para mejorar la modularidad, escalabilidad y mantenimiento.
+
+Uno de los principales beneficios de la **modularidad** fue la posibilidad de desplegar cada componente de forma independiente. La capa de presentación y aplicación fueron alojadas en servicios proporcionados por AWS y la capa de datos en Azure, siendo todo el sistema totalmente funcional y compatible entre si.
+
+En cuanto al **mantenimiento**, este se ve mejorado porque cada capa tiene una única responsabilidad, lo que facilita la depuración y actualización sin impactar a todo el sistema. Un ejemplo de esto fue el cambio de utilizar una base de datos en Amazon RDS a datos fijos, lo que solo requirió cambiar pocas líneas de código dentro de la capa de aplicación, sin la necesidad de realizar cambios en otros componentes.
 
 A continuación se presenta un diagrama de dichas capas:
 
