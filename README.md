@@ -84,7 +84,7 @@ Para el almacenamiento de datos, en un primer lugar se implementó una base de d
 
 <p align="right">(<a href="#readme-top">Volver al inicio</a>)</p>
 
-## Contacto
+# Contacto
 
 Juan Andrés Macedo - juanmacedo2003@hotmail.com
 
