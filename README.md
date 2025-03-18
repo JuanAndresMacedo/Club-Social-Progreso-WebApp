@@ -10,24 +10,22 @@ Este proyecto no solo pone en práctica diversas tecnologías con las que me he 
 
 **Frontend:**
 
-![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
- (versión 18)   
- ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+[![Angular][Angular-icon]][Angular-url] 
+(versión 18)   
+[![Bootstrap][Bootstrap-icon]][Bootstrap-url]
 
 **Backend/API:**
 
-![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)  
-![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
-
+[![C#][C#-icon]][C#-url]
+[![.NET][.NET-icon]][.NET-url]
 
 **Base de datos:**
 
-![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white)
-
+[![SQL Server][SQL-Server-icon]][SQL-Server-url]
 
 **Despliegue en la nube:**
 
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
+[![AWS][AWS-icon]][AWS-url]
 
 En la sección [Infraestructura en la nube](#infraestructura-en-la-nube) se detallan los servicios en especifico y se brinda un diagrama de la infraestructura 
 
@@ -91,3 +89,22 @@ Juan Andrés Macedo - juanmacedo2003@hotmail.com
 Linkedin: [https://www.linkedin.com/in/juan-andres-macedo/](https://www.linkedin.com/in/juan-andres-macedo/)
 
 <p align="right">(<a href="#readme-top">Volver al inicio</a>)</p>
+
+<!-- Links e imágenes -->
+[Bootstrap-icon]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com
+
+[Angular-icon]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
+[Angular-url]: https://v18.angular.dev/
+
+[C#-icon]: https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white
+[C#-url]: https://dotnet.microsoft.com/es-es/languages/csharp
+
+[.NET-icon]: https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white
+[.NET-url]: https://dotnet.microsoft.com/es-es/
+
+[SQL-Server-icon]: https://img.shields.io/badge/SQL%20Server-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white
+[SQL-Server-url]: https://www.microsoft.com/es-es/sql-server/sql-server-downloads
+
+[AWS-icon]: https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white
+[AWS-url]: https://aws.amazon.com/es/what-is-aws/
